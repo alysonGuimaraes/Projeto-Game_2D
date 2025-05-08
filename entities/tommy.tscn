@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dke4lfa0cgh4y"]
+
+[ext_resource type="Script" uid="uid://b52caoqb4ppvm" path="res://scripts/tommy.gd" id="1_saik5"]
+[ext_resource type="Texture2D" uid="uid://box1d3ahuidm0" path="res://sprites/characters/Tommy/Idle_Poses (32 x 32).png" id="2_35p3v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwq14"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saik5"]
+atlas = ExtResource("2_35p3v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35p3v"]
+atlas = ExtResource("2_35p3v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lv5ry"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_saik5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35p3v")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Tommy" type="CharacterBody2D" groups=["Players"]]
+script = ExtResource("1_saik5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_rwq14")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lv5ry")
+animation = &"new_animation"
+frame_progress = 0.591771
