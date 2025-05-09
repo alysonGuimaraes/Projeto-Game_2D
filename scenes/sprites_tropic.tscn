@@ -161,6 +161,7 @@ shape = SubResource("RectangleShape2D_77lao")
 [node name="Background" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Sky" type="Sprite2D" parent="Background/Sky"]
@@ -170,6 +171,7 @@ texture = ExtResource("1_bxyt2")
 centered = false
 
 [node name="Cloudy1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Cloudy1" type="Sprite2D" parent="Background/Cloudy1"]
@@ -179,6 +181,7 @@ texture = ExtResource("2_owx7a")
 centered = false
 
 [node name="Cloudy2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Cloudy2" type="Sprite2D" parent="Background/Cloudy2"]
@@ -188,6 +191,7 @@ texture = ExtResource("3_ie22o")
 centered = false
 
 [node name="Hills" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.4, 0.4)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Hills" type="Sprite2D" parent="Background/Hills"]
@@ -198,6 +202,7 @@ centered = false
 
 [node name="Foreground" type="ParallaxLayer" parent="Background"]
 position = Vector2(-5, -203)
+motion_scale = Vector2(1.5, 1.5)
 motion_mirroring = Vector2(432, 0)
 
 [node name="Foreground" type="Sprite2D" parent="Background/Foreground"]
