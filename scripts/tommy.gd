@@ -23,7 +23,11 @@ func _physics_process(delta: float) -> void:
 		
 	if velocity.x > 0:
 		anim.flip_h = !direction
+		anim.play("walking")
 	elif velocity.x < 0:
 		anim.flip_h = direction
+		anim.play("walking")
+	else: 
+		anim.play("idle")
 	
 	move_and_slide()

@@ -1,0 +1,140 @@
+[gd_scene load_steps=21 format=3 uid="uid://dke4lfa0cgh4y"]
+
+[ext_resource type="Script" uid="uid://b52caoqb4ppvm" path="res://scripts/tommy.gd" id="1_saik5"]
+[ext_resource type="Texture2D" uid="uid://wca11n7o0ls6" path="res://sprites/characters/Holly/Idle (32 x 32).png" id="2_lbdg6"]
+[ext_resource type="Texture2D" uid="uid://cjp8f6deqtbm" path="res://sprites/characters/Holly/Running (32 x 32).png" id="3_wggmy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwq14"]
+radius = 8.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1n15"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0puoo"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls4nj"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eqk7"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3o6x"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wua5w"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbwhm"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2cts"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgehf"]
+atlas = ExtResource("2_lbdg6")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xti5s"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i328g"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anpvu"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg1am"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyn47"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urdlr"]
+atlas = ExtResource("3_wggmy")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lv5ry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1n15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0puoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ls4nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eqk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3o6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wua5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbwhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2cts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgehf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xti5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i328g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anpvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg1am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyn47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urdlr")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="Holly" type="CharacterBody2D" groups=["Players"]]
+script = ExtResource("1_saik5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_rwq14")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lv5ry")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.859989
