@@ -1,0 +1,70 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dw6l1i2y5jq5n"]
+
+[ext_resource type="Texture2D" uid="uid://byq5rx315gihg" path="res://sprites/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" id="2_g2y7v"]
+[ext_resource type="Texture2D" uid="uid://brd6ejl515pi1" path="res://sprites/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="3_omqfk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd82e"]
+texture = ExtResource("2_g2y7v")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+15:3/0 = 0
+12:5/0 = 0
+14:5/0 = 0
+12:6/0 = 0
+14:6/0 = 0
+12:7/0 = 0
+14:7/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fs4vl"]
+texture = ExtResource("3_omqfk")
+5:1/size_in_atlas = Vector2i(3, 3)
+5:1/0 = 0
+9:1/size_in_atlas = Vector2i(3, 3)
+9:1/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+14:5/0 = 0
+16:5/0 = 0
+18:5/0 = 0
+1:1/size_in_atlas = Vector2i(3, 3)
+1:1/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_rd82e")
+sources/2 = SubResource("TileSetAtlasSource_fs4vl")
