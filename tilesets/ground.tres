@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://br4y584ww0sn2" path="res://sprites/terrain/Winter World/Terrain (16 x 16).png" id="2_ekwrt"]
 [ext_resource type="Texture2D" uid="uid://druqvu8bvixjs" path="res://sprites/terrain/Autumn Forest/Terrain (16 x 16).png" id="3_ausgn"]
 [ext_resource type="Texture2D" uid="uid://b8blcfl8vsilm" path="res://sprites/terrain/Grassland/Terrain (16 x 16).png" id="4_rw4mf"]
-[ext_resource type="Texture2D" uid="uid://dhmg84xx32lnm" path="res://sprites/terrain/terrain mix/terrain_walls.png" id="5_rw4mf"]
+[ext_resource type="Texture2D" uid="uid://dhmg84xx32lnm" path="res://sprites/terrain/specific use/terrain_walls.png" id="5_rw4mf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ekwrt"]
 texture = ExtResource("1_kye4i")

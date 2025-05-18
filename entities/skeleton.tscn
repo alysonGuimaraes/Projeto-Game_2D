@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bernnw7xskwf6"]
+
+[ext_resource type="Script" uid="uid://bwk0ojnfia7ht" path="res://scripts/skeleton.gd" id="1_yag7t"]
+[ext_resource type="Texture2D" uid="uid://xuik14bj2akj" path="res://sprites/enemies/skeleton/Standing (32 x 32).png" id="2_fpmxe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yag7t"]
+atlas = ExtResource("2_fpmxe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hr2a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yag7t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="skeleton" type="CharacterBody2D" groups=["Enemies"]]
+script = ExtResource("1_yag7t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-6, 16, -6, -10, 8, -10, 8, 16)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6hr2a")
+animation = &"idle"
+frame_progress = 0.905832
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(9, 3)
+scale = Vector2(1, 0.28)
