@@ -293,7 +293,7 @@ scale = Vector2(0.984375, 1.20313)
 sprite_frames = SubResource("SpriteFrames_hen42")
 animation = &"antesdeandar"
 
-[node name="Hitbox" type="Area2D" parent="." groups=["Enemies"]]
+[node name="Hitbox" type="Area2D" parent="." groups=["DeathZone"]]
 script = SubResource("GDScript_0v10j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]

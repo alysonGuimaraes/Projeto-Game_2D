@@ -148,7 +148,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Players"]]
 script = SubResource("GDScript_7bb4d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -26,6 +26,7 @@ window/stretch/mode="canvas_items"
 
 Enemies="Grupo de inimgos do jogo"
 Players="Grupo onde está presente os jogadores"
+DeathZone=""
 
 [input]
 

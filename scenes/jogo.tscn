@@ -1104,10 +1104,9 @@ centered = false
 position = Vector2(429, 499)
 
 [node name="DeathZone" parent="." instance=ExtResource("20_kvikr")]
-position = Vector2(427, 673)
-
-[node name="DeathZone2" parent="." instance=ExtResource("20_kvikr")]
-position = Vector2(880, 673)
+position = Vector2(291, 654)
+scale = Vector2(0.16, 1)
 
 [node name="DeathZone3" parent="." instance=ExtResource("20_kvikr")]
-position = Vector2(1464, 681)
+position = Vector2(1420, 677)
+scale = Vector2(0.88, 1)
