@@ -1,0 +1,187 @@
+[gd_scene load_steps=15 format=3 uid="uid://djw810lc3xrhm"]
+
+[ext_resource type="Script" uid="uid://djm147yea75kc" path="res://scripts/how_to_play.gd" id="1_7ygnx"]
+[ext_resource type="FontFile" uid="uid://bfy3mqhb77x55" path="res://font/at01.ttf" id="1_sfrlx"]
+[ext_resource type="Texture2D" uid="uid://bm2hd8q5ohohe" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_73.png" id="2_qbmdm"]
+[ext_resource type="Texture2D" uid="uid://b0j3dnk623mw7" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_72.png" id="3_wxcs0"]
+[ext_resource type="Texture2D" uid="uid://csacgo12h2nkq" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_23.png" id="5_88out"]
+[ext_resource type="Texture2D" uid="uid://du7plqkfsnhpv" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_25.png" id="6_84fuc"]
+[ext_resource type="Texture2D" uid="uid://cnj8liw1wengn" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_70.png" id="7_gay3q"]
+[ext_resource type="Texture2D" uid="uid://b1ioe633yqwi" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_14.png" id="8_88rc0"]
+[ext_resource type="Texture2D" uid="uid://x6586pd8ixsl" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_203.png" id="9_11xl4"]
+[ext_resource type="Texture2D" uid="uid://cix8plrux17r7" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_71.png" id="10_aw8ct"]
+[ext_resource type="Texture2D" uid="uid://c8sjg54yjko8u" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_24.png" id="11_345bj"]
+[ext_resource type="Texture2D" uid="uid://disxieqwfnnsn" path="res://sprites/ui/Icons Keyboard/Individual Icons/keyboard_15.png" id="12_gwbjg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pr36v"]
+font = ExtResource("1_sfrlx")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ygnx"]
+font = ExtResource("1_sfrlx")
+font_size = 42
+
+[node name="screen_how_to_play" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ygnx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 416.0
+color = Color(0.368627, 0.596078, 0.796078, 1)
+
+[node name="Button" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.5
+offset_top = -31.0
+offset_right = 27.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="back_button" type="Button" parent="Button"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="Information" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -34.0
+offset_right = 194.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="move_information" type="HBoxContainer" parent="Information"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="left_arrow" type="TextureRect" parent="Information/move_information"]
+layout_mode = 2
+texture = ExtResource("2_qbmdm")
+
+[node name="right_arrow" type="TextureRect" parent="Information/move_information"]
+layout_mode = 2
+texture = ExtResource("3_wxcs0")
+
+[node name="divisor" type="Label" parent="Information/move_information"]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="a_key" type="TextureRect" parent="Information/move_information"]
+layout_mode = 2
+texture = ExtResource("5_88out")
+
+[node name="d_key" type="TextureRect" parent="Information/move_information"]
+layout_mode = 2
+texture = ExtResource("6_84fuc")
+
+[node name="explanation" type="Label" parent="Information/move_information"]
+layout_mode = 2
+text = ": Mover Personagem"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="jump_information" type="HBoxContainer" parent="Information"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="up_arrow" type="TextureRect" parent="Information/jump_information"]
+layout_mode = 2
+texture = ExtResource("7_gay3q")
+
+[node name="divisor" type="Label" parent="Information/jump_information"]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="w_key" type="TextureRect" parent="Information/jump_information"]
+layout_mode = 2
+texture = ExtResource("8_88rc0")
+
+[node name="divisor2" type="Label" parent="Information/jump_information"]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="space_key" type="TextureRect" parent="Information/jump_information"]
+layout_mode = 2
+texture = ExtResource("9_11xl4")
+
+[node name="explanation" type="Label" parent="Information/jump_information"]
+layout_mode = 2
+text = ": Pular"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="duck_information" type="HBoxContainer" parent="Information"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="down_arrow" type="TextureRect" parent="Information/duck_information"]
+layout_mode = 2
+texture = ExtResource("10_aw8ct")
+
+[node name="divisor" type="Label" parent="Information/duck_information"]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="s_key" type="TextureRect" parent="Information/duck_information"]
+layout_mode = 2
+texture = ExtResource("11_345bj")
+
+[node name="explanation" type="Label" parent="Information/duck_information"]
+layout_mode = 2
+text = ": Agachar"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="Attack_information" type="HBoxContainer" parent="Information"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="e_key" type="TextureRect" parent="Information/Attack_information"]
+layout_mode = 2
+texture = ExtResource("12_gwbjg")
+
+[node name="explanation" type="Label" parent="Information/Attack_information"]
+layout_mode = 2
+text = ": Ataque"
+label_settings = SubResource("LabelSettings_pr36v")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 30.0
+offset_right = 84.0
+offset_bottom = 34.0
+grow_horizontal = 2
+text = "Como Jogar ?"
+label_settings = SubResource("LabelSettings_7ygnx")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="Button/back_button" to="." method="_on_back_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button/back_button" to="." method="_on_back_button_mouse_exited"]
+[connection signal="pressed" from="Button/back_button" to="." method="_on_back_button_pressed"]
