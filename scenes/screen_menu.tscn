@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj2jk32qbvyjt"]
+
+[ext_resource type="Script" uid="uid://8i2xmou4u8vn" path="res://scripts/menu.gd" id="1_12rsi"]
+[ext_resource type="FontFile" uid="uid://bfy3mqhb77x55" path="res://font/at01.ttf" id="1_wmrcs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_12rsi"]
+font_size = 60
+font_color = Color(0.99558, 0.99558, 0.99558, 1)
+
+[node name="screen_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_12rsi")
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 576.0
+offset_bottom = 416.0
+color = Color(0.368627, 0.596078, 0.796078, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 56.0
+offset_right = 222.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("1_wmrcs")
+text = "Projeto A3"
+label_settings = SubResource("LabelSettings_12rsi")
+
+[node name="button_container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 130.0
+offset_right = 166.0
+offset_bottom = 266.0
+
+[node name="new_game_button" type="Button" parent="button_container" groups=["Buttons"]]
+layout_mode = 2
+text = "Novo jogo"
+
+[node name="how_to_play_button" type="Button" parent="button_container" groups=["Buttons"]]
+layout_mode = 2
+text = "Como jogar?"
+
+[node name="credits_button" type="Button" parent="button_container" groups=["Buttons"]]
+layout_mode = 2
+text = "Créditos"
+
+[node name="exit_button" type="Button" parent="button_container" groups=["Buttons"]]
+layout_mode = 2
+text = "Sair"
