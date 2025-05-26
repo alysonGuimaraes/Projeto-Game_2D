@@ -1,6 +1,5 @@
 extends Control
 
-@export var scene_to_load: String
 const MOUSE_CURSOR = preload("res://sprites/ui/Mini UI/mouse icons/New Piskel-1.png")
 const MOUSE_CLICK = preload("res://sprites/ui/Mini UI/mouse icons/New Piskel-2.png")
 
@@ -28,10 +27,14 @@ func _on_button_pressed(_button: Button) -> void:
 		"how_to_play_button":
 			call_deferred("load_scene", "screen_how_to_play")
 		"credits_button":
-			pass
+			call_deferred("load_scene", "screen_credits")
 		"exit_button":
-			pass
+			call_deferred("quit_game")
 	
 
 func load_scene(scene):
 	get_tree().change_scene_to_file("res://scenes/" + scene + ".tscn")
+	
+
+func quit_game() -> void:
+	get_tree().quit()

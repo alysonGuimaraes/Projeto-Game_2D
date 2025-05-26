@@ -19,7 +19,7 @@ font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ygnx"]
 font = ExtResource("1_sfrlx")
-font_size = 42
+font_size = 48
 
 [node name="screen_how_to_play" type="Control"]
 layout_mode = 3
@@ -50,7 +50,7 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="back_button" type="Button" parent="Button"]
+[node name="back_button" type="Button" parent="Button" groups=["Button"]]
 layout_mode = 2
 text = "Voltar"
 
