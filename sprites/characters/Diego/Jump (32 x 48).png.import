@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnwp3hhlrpoto"
-path="res://.godot/imported/Shooting_while_jumping (48 x 48).png-3a6f4674141b6c2e8a140333b4ec1eb9.ctex"
+uid="uid://bnbyinoma6ub3"
+path="res://.godot/imported/Jump (32 x 48).png-9d890de894753d0e91658bd62d7d52ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Diego/Shooting_while_jumping (48 x 48).png"
-dest_files=["res://.godot/imported/Shooting_while_jumping (48 x 48).png-3a6f4674141b6c2e8a140333b4ec1eb9.ctex"]
+source_file="res://sprites/characters/Diego/Jump (32 x 48).png"
+dest_files=["res://.godot/imported/Jump (32 x 48).png-9d890de894753d0e91658bd62d7d52ff.ctex"]
 
 [params]
 

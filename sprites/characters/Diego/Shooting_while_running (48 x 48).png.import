@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sffvt4ji0uvv"
-path="res://.godot/imported/Standing (32 x 48).png-05104cce5a64996c652136ee15ef048f.ctex"
+uid="uid://c0n1rdr1p1p57"
+path="res://.godot/imported/Shooting_while_running (48 x 48).png-af07b137e0a4a46dcfd7a89bee2c94e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Diego/Standing (32 x 48).png"
-dest_files=["res://.godot/imported/Standing (32 x 48).png-05104cce5a64996c652136ee15ef048f.ctex"]
+source_file="res://sprites/characters/Diego/Shooting_while_running (48 x 48).png"
+dest_files=["res://.godot/imported/Shooting_while_running (48 x 48).png-af07b137e0a4a46dcfd7a89bee2c94e2.ctex"]
 
 [params]
 

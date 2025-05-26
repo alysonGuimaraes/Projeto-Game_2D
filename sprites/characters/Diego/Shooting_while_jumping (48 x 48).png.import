@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8xvpwfs6hea6"
-path="res://.godot/imported/Idle (32 x 48).png-c7b7dd238e2e04ddcf434929c840aa29.ctex"
+uid="uid://bnwp3hhlrpoto"
+path="res://.godot/imported/Shooting_while_jumping (48 x 48).png-ce9f310e649d17431f16e0cd26d00af3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Diego/Idle (32 x 48).png"
-dest_files=["res://.godot/imported/Idle (32 x 48).png-c7b7dd238e2e04ddcf434929c840aa29.ctex"]
+source_file="res://sprites/characters/Diego/Shooting_while_jumping (48 x 48).png"
+dest_files=["res://.godot/imported/Shooting_while_jumping (48 x 48).png-ce9f310e649d17431f16e0cd26d00af3.ctex"]
 
 [params]
 

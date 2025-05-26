@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbamjdcnp4iob"
-path="res://.godot/imported/Reloading_while_standing (32 x 48).png-335d32973a001b63e1ef334a108f9ef1.ctex"
+uid="uid://7ub5ayvlggsn"
+path="res://.godot/imported/Running (32 x 48).png-672143268627b307ca54276ab07732f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Diego/Reloading_while_standing (32 x 48).png"
-dest_files=["res://.godot/imported/Reloading_while_standing (32 x 48).png-335d32973a001b63e1ef334a108f9ef1.ctex"]
+source_file="res://sprites/characters/Diego/Running (32 x 48).png"
+dest_files=["res://.godot/imported/Running (32 x 48).png-672143268627b307ca54276ab07732f5.ctex"]
 
 [params]
 

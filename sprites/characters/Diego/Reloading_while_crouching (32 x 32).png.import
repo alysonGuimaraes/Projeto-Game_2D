@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kkyfn1snllwq"
-path="res://.godot/imported/Blink (32 x 48).png-fc0f4ab23683e118d9723ffd3690fab3.ctex"
+uid="uid://d4g35ulonw1ra"
+path="res://.godot/imported/Reloading_while_crouching (32 x 32).png-41686ed39aead3a59eff18c6495cb34c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Diego/Blink (32 x 48).png"
-dest_files=["res://.godot/imported/Blink (32 x 48).png-fc0f4ab23683e118d9723ffd3690fab3.ctex"]
+source_file="res://sprites/characters/Diego/Reloading_while_crouching (32 x 32).png"
+dest_files=["res://.godot/imported/Reloading_while_crouching (32 x 32).png-41686ed39aead3a59eff18c6495cb34c.ctex"]
 
 [params]
 
