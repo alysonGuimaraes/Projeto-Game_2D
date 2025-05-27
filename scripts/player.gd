@@ -1,96 +1,124 @@
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+const MAGICAL_ORB = preload("res://entities/magical_orb.tscn")
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -320
 
+var last_direction = 1
+
 enum playerState {
-	GROUND,
-	AIR,
+	IDLE,
+	WALK,
+	JUMP,
+	FALL,
 	HURT,
 	ATTACK,
 	DUCK
 }
 
-var state
+var state: playerState
 
 func _ready() -> void:
-	go_to_ground()
+	go_to_idle()
 
 func _physics_process(delta: float) -> void:
 	
 	if ! is_on_floor():
 		velocity += get_gravity() * delta
 		
+	if Input.is_action_just_pressed("shot"):
+		var new_orb = MAGICAL_ORB.instantiate()
+		new_orb.position = position
+		new_orb.direction = last_direction
+		add_sibling(new_orb)
+		
+		
 	match state:
-		playerState.GROUND: in_ground()
-		playerState.AIR: in_air()
+		playerState.IDLE: in_idle()
+		playerState.WALK: in_walk()
+		playerState.JUMP: in_jump()
+		playerState.FALL: in_fall()
 		playerState.DUCK: in_duck()
+		playerState.ATTACK: pass
+		playerState.HURT: pass
 	
 	move_and_slide()
-
-func go_to_ground():
-	state = playerState.GROUND
+	
+func go_to_idle():
+	state = playerState.IDLE
+	anim.play("idle")
 	
 
-func in_ground():
-	var direction := Input.get_axis("left", "right")
+func in_idle():
+	move()
 	
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if velocity.x != 0:
+		go_to_walk()
+		return
+		
+	if Input.is_action_just_pressed("jump"):
+		go_to_jump()
+		return
+		
+	if ! is_on_floor():
+		go_to_fall()
+		return
 	
-	if velocity.x > 0:
-		anim.flip_h = !direction
-		anim.play("walking")
-	elif velocity.x < 0:
-		anim.flip_h = direction
-		anim.play("walking")
-	else: 
-		anim.play("idle")
+
+func go_to_walk():
+	anim.play("walking")
+	state = playerState.WALK
+	
+
+func in_walk():
+	move()
+	
+	if velocity.x == 0:
+		go_to_idle()
+		return
 		
 	if Input.is_action_just_pressed("crouch"):
 		go_to_duck()
+		return
 		
 	if Input.is_action_just_pressed("jump") :
-		velocity.y = JUMP_VELOCITY
-		go_to_air()
+		go_to_jump()
+		return
 			
 	if ! is_on_floor():
-		go_to_air()
+		go_to_fall()
+		return
 	
 
-func go_to_air():
-	if velocity.y < 0:
-		anim.play("jump")
-		state = playerState.AIR
-	elif velocity.y > 0:
-		anim.play("fall")
-		state = playerState.AIR
+func go_to_jump():
+	anim.play("jump")
+	velocity.y += JUMP_VELOCITY
+	state = playerState.JUMP
 	
 
-func in_air():
-	var direction := Input.get_axis("left", "right")
+func in_jump():
+	move()
 	
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if velocity.x != 0 and is_on_floor():
+		go_to_walk()
+	elif velocity.x == 0 and is_on_floor():
+		go_to_idle()
 		
-	if velocity.x > 0:
-		anim.flip_h = !direction
-	elif velocity.x < 0:
-		anim.flip_h = direction
-		
-	if velocity.y < 0:
-		anim.play("jump")
-	elif velocity.y > 0:
-		anim.play("fall")
-		
-	if is_on_floor():
-		go_to_ground()
+
+func go_to_fall():
+	anim.play("fall")
+	state = playerState.FALL
+	
+
+func in_fall():
+	move()
+	
+	if velocity.x != 0 and is_on_floor():
+		go_to_walk()
+	elif velocity.x == 0 and is_on_floor():
+		go_to_idle()
 	
 
 func go_to_hurt():
@@ -119,5 +147,19 @@ func go_to_duck():
 func in_duck():
 	velocity.x = 0
 	if Input.is_action_just_released("crouch"):
-		go_to_ground()
+		go_to_idle()
 	
+
+func move():
+	var direction := Input.get_axis("left", "right")
+	
+	if direction:
+		velocity.x = direction * SPEED
+		last_direction = direction
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if velocity.x > 0:
+		anim.flip_h = !direction
+	elif velocity.x < 0:
+		anim.flip_h = direction
