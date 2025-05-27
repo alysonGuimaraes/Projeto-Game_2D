@@ -1,16 +1,17 @@
-[gd_scene load_steps=25 format=4 uid="uid://b5bahajaw77nj"]
+[gd_scene load_steps=26 format=4 uid="uid://b5bahajaw77nj"]
 
 [ext_resource type="Texture2D" uid="uid://dn2ciu3vs1d3p" path="res://sprites/terrain/Palm Tree Island/Terrain/Terrain (32x32).png" id="1_c8e8x"]
-[ext_resource type="Texture2D" uid="uid://ck38lxg6e8u4r" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/01.png" id="2_l1yjt"]
-[ext_resource type="Texture2D" uid="uid://bt4qqpifgkvma" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/02.png" id="3_v8s17"]
-[ext_resource type="Texture2D" uid="uid://dgfb765snwrkq" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/06.png" id="4_bfq6o"]
-[ext_resource type="Texture2D" uid="uid://2ja3dg6f0eok" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/05.png" id="5_4f7mj"]
-[ext_resource type="Texture2D" uid="uid://dwn4qlt6lwvgp" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/04.png" id="6_yrdqy"]
-[ext_resource type="Texture2D" uid="uid://dp5ph7ia864br" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Chains/Big/01.png" id="7_kyl40"]
-[ext_resource type="Texture2D" uid="uid://dgo8wbh17ey66" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Chains/Big/02.png" id="8_orjxy"]
-[ext_resource type="Texture2D" uid="uid://8addih0a8b1x" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Door/Closing/01.png" id="9_4vryj"]
-[ext_resource type="Texture2D" uid="uid://8ga34w3fmlnl" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Door/Closing/03.png" id="10_wya6i"]
-[ext_resource type="Texture2D" uid="uid://ckffo6bxrcup7" path="res://sprites/terrain/Pirate Ship/Sprites/Tilesets/Terrain and Back Wall (32x32).png" id="11_t837g"]
+[ext_resource type="Texture2D" uid="uid://ck6xwn1yigupb" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/01.png" id="2_l1yjt"]
+[ext_resource type="Texture2D" uid="uid://db4r475ueblff" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/02.png" id="3_v8s17"]
+[ext_resource type="Texture2D" uid="uid://chnalulvnvqla" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/06.png" id="4_bfq6o"]
+[ext_resource type="Texture2D" uid="uid://cyinekms6uhwu" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/05.png" id="5_4f7mj"]
+[ext_resource type="Texture2D" uid="uid://ca2c6a5etye0j" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Barrels and Bottles/04.png" id="6_yrdqy"]
+[ext_resource type="Texture2D" uid="uid://b81rnuy0qi6qb" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Chains/Big/01.png" id="7_kyl40"]
+[ext_resource type="Texture2D" uid="uid://h8fps2v4w6x" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Chains/Big/02.png" id="8_orjxy"]
+[ext_resource type="Texture2D" uid="uid://b2tl46iqxrnmq" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Door/Closing/01.png" id="9_4vryj"]
+[ext_resource type="Texture2D" uid="uid://b1dhqqg8syqi4" path="res://sprites/terrain/Pirate Ship/Sprites/Decorations/Door/Closing/03.png" id="10_wya6i"]
+[ext_resource type="Texture2D" uid="uid://c8ocavrl4lxmg" path="res://sprites/terrain/Pirate Ship/Sprites/Tilesets/Terrain and Back Wall (32x32).png" id="11_t837g"]
+[ext_resource type="PackedScene" uid="uid://cvrxlbwiusgdn" path="res://entities/player.tscn" id="12_v8s17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g1nqw"]
 texture = ExtResource("1_c8e8x")
@@ -691,3 +692,5 @@ tile_set = SubResource("TileSet_b3c3t")
 [node name="decoration" type="TileMapLayer" parent="tiles/terrain"]
 tile_map_data = PackedByteArray("AAAfAAgABQAAAAAAAAAfAAoABQAAAAAAAAAfAA0ABQAAAAAAAAAYAAUABQAAAAAAAAAYAAgABQAAAAAAAAAYAAsABQAAAAAAAAAYAA0ABQAAAAAAAAARAAkABQAAAAAAAAARAAsABQAAAAAAAAARAA0ABQAAAAAAAAA6AAoABQAAAAAAAAA6AAcABQAAAAAAAAA6AAUABQAAAAAAAAA6AAIABQAAAAAAAAA3AAgABQAAAAAAAAA3AAsABQAAAAAAAAAkAAgABQAAAAAAAAAkAAoABQAAAAAAAAAkAAwABQAAAAAAAAA3AAwABQAAAAAAAAA9AAIABQAAAAAAAAA9AAUABQAAAAAAAAA9AAgABQAAAAAAAABAAAYABQAAAAAAAABAAAMABQAAAAAAAABAAAIABQAAAAAAAABDAAIABQAAAAAAAABDAAQABQAAAAAAAABGAAIABQAAAAAAAAA=")
 tile_set = SubResource("TileSet_bhgu7")
+
+[node name="player" parent="." instance=ExtResource("12_v8s17")]
