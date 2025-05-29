@@ -40,3 +40,6 @@ func in_ground():
 		scale.x *= -1
 		
 	velocity.x += direction * SPEED
+	
+func take_damage():
+	anim.play("death")

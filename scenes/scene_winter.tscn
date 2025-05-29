@@ -117,7 +117,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="skeleton" parent="." instance=ExtResource("13_jrhpb")]
-position = Vector2(263, 224)
+position = Vector2(263, 368)
 
 [node name="magical orb" parent="." instance=ExtResource("14_flpsv")]
 position = Vector2(187, 363)
