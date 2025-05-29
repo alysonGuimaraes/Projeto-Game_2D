@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cgjk2ckvemsnp"]
+[gd_scene load_steps=17 format=4 uid="uid://cgjk2ckvemsnp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ltamptikst" path="res://sprites/terrain/Winter World/Background parts/5 - Sky_color.png" id="1_bepuj"]
 [ext_resource type="Texture2D" uid="uid://p16mgeb6xrbp" path="res://sprites/terrain/Winter World/Background parts/3 - Big_mountain_BG.png" id="1_svenw"]
@@ -13,7 +13,6 @@
 [ext_resource type="TileSet" uid="uid://dy5jmwqltpkia" path="res://tilesets/builds.tres" id="8_ndgk4"]
 [ext_resource type="Texture2D" uid="uid://cx2jynm7bpr14" path="res://sprites/misc/Misc. universal tiles/Water_frames (16 x 32).png" id="10_f8qxl"]
 [ext_resource type="PackedScene" uid="uid://bernnw7xskwf6" path="res://entities/skeleton.tscn" id="13_jrhpb"]
-[ext_resource type="PackedScene" uid="uid://fj05t71y4myo" path="res://entities/magical_orb.tscn" id="14_flpsv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jrhpb"]
 shader = ExtResource("4_bepuj")
@@ -105,7 +104,7 @@ tile_map_data = PackedByteArray("AAAaABkAAAAAAAAAAAAbABkAAAAAAAAAAAAcABkAAAAAAAA
 tile_set = SubResource("TileSet_bepuj")
 
 [node name="Holly" parent="." instance=ExtResource("5_vdrup")]
-position = Vector2(143, 368)
+position = Vector2(205, 224)
 
 [node name="PlayerCamera" parent="." instance=ExtResource("6_axhv0")]
 position = Vector2(245, 328)
@@ -117,7 +116,4 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="skeleton" parent="." instance=ExtResource("13_jrhpb")]
-position = Vector2(263, 368)
-
-[node name="magical orb" parent="." instance=ExtResource("14_flpsv")]
-position = Vector2(187, 363)
+position = Vector2(263, 223)

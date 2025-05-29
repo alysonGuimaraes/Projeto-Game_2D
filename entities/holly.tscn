@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dke4lfa0cgh4y"]
+[gd_scene load_steps=40 format=3 uid="uid://dke4lfa0cgh4y"]
 
 [ext_resource type="Script" uid="uid://b52caoqb4ppvm" path="res://scripts/player.gd" id="1_saik5"]
 [ext_resource type="Texture2D" uid="uid://wca11n7o0ls6" path="res://sprites/characters/Holly/Idle (32 x 32).png" id="2_lbdg6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cgsmnoxfqmv2" path="res://sprites/characters/Holly/Ducking (32 x 32).png" id="3_5eqk7"]
 [ext_resource type="Texture2D" uid="uid://cjp8f6deqtbm" path="res://sprites/characters/Holly/Running (32 x 32).png" id="3_wggmy"]
 [ext_resource type="Texture2D" uid="uid://d4b4k6puuhhl2" path="res://sprites/characters/Holly/Jump (32 x 32).png" id="4_0puoo"]
+[ext_resource type="Script" uid="uid://b4nkdphmbtw8r" path="res://scripts/hitbox.gd" id="9_s3o6x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mt15"]
 atlas = ExtResource("2_ls4nj")
@@ -243,7 +244,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5eqk7"]
+size = Vector2(14, 22)
+
 [node name="Holly" type="CharacterBody2D" groups=["Players"]]
+collision_layer = 2
 script = ExtResource("1_saik5")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
@@ -255,3 +260,11 @@ polygon = PackedVector2Array(-8, 17.5267, 8, 17.5267, 8, -10.0153, -8, -10.0153)
 sprite_frames = SubResource("SpriteFrames_lv5ry")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("9_s3o6x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_5eqk7")

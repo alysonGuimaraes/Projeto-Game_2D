@@ -6,6 +6,7 @@ const MAGICAL_ORB = preload("res://entities/magical_orb.tscn")
 const SPEED = 150.0
 const JUMP_VELOCITY = -320
 
+var damage_count = 3
 var last_direction = 1
 
 enum playerState {
@@ -42,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		playerState.FALL: in_fall()
 		playerState.DUCK: in_duck()
 		playerState.ATTACK: pass
-		playerState.HURT: pass
+		playerState.HURT: in_hurt()
 	
 	move_and_slide()
 	
@@ -127,7 +128,11 @@ func go_to_hurt():
 	
 
 func in_hurt():
-	pass
+	if damage_count > 0:
+		call_deferred("reload_scene")
+		damage_count == 3
+		
+	damage_count -= 1
 	
 
 func go_to_attack():
@@ -163,3 +168,12 @@ func move():
 		anim.flip_h = !direction
 	elif velocity.x < 0:
 		anim.flip_h = direction
+	
+
+func take_damage():
+	go_to_hurt()
+	
+	
+func reload_scene():
+	get_tree().reload_current_scene()
+	
