@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 const MAGICAL_ORB = preload("res://entities/magical_orb.tscn")
 
-const SPEED = 150.0
-const JUMP_VELOCITY = -320
+const SPEED = 200.0
+const JUMP_VELOCITY = -400
 
 var damage_count = 3
 var last_direction = 1
