@@ -35,7 +35,6 @@ func _physics_process(delta: float) -> void:
 		new_orb.direction = last_direction
 		add_sibling(new_orb)
 		
-		
 	match state:
 		playerState.IDLE: in_idle()
 		playerState.WALK: in_walk()
