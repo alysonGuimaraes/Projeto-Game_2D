@@ -1,32 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://fj05t71y4myo"]
+[gd_scene load_steps=9 format=3 uid="uid://fj05t71y4myo"]
 
-[ext_resource type="Script" uid="uid://0m4ot4q3uf5b" path="res://scripts/magical_orb.gd" id="1_lsiy2"]
-[ext_resource type="Texture2D" uid="uid://wv65astg0mgh" path="res://sprites/characters/Wizz/Magical_Orbs_Spell_(32 x 32).png" id="2_fc6q5"]
-[ext_resource type="Texture2D" uid="uid://633om1cxrfap" path="res://sprites/effects/Effects/Explosion_Poof (16 x 16).png" id="3_wjiga"]
+[ext_resource type="Texture2D" uid="uid://wv65astg0mgh" path="res://sprites/characters/Wizz/Magical_Orbs_Spell_(32 x 32).png" id="1_21bi0"]
+[ext_resource type="Script" uid="uid://0m4ot4q3uf5b" path="res://scripts/magical_orb.gd" id="1_lun43"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lun43"]
-atlas = ExtResource("2_fc6q5")
+atlas = ExtResource("1_21bi0")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsiy2"]
-atlas = ExtResource("2_fc6q5")
+atlas = ExtResource("1_21bi0")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc6q5"]
-atlas = ExtResource("2_fc6q5")
+atlas = ExtResource("1_21bi0")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjiga"]
-atlas = ExtResource("2_fc6q5")
+atlas = ExtResource("1_21bi0")
 region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdnmc"]
-atlas = ExtResource("3_wjiga")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ydkv"]
-atlas = ExtResource("3_wjiga")
-region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bdnmc"]
 animations = [{
@@ -46,30 +37,20 @@ animations = [{
 "loop": true,
 "name": &"orb_effect",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bdnmc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ydkv")
-}],
-"loop": false,
-"name": &"tirodiego",
-"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ydkv"]
-radius = 3.16228
+radius = 7.0
 
-[node name="MagicalOrb" type="Area2D"]
+[node name="magical orb" type="Area2D"]
 collision_mask = 4
-script = ExtResource("1_lsiy2")
+script = ExtResource("1_lun43")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bdnmc")
-animation = &"tirodiego"
-autoplay = "tirodiego"
+animation = &"orb_effect"
+autoplay = "orb_effect"
+frame_progress = 0.242026
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2ydkv")
