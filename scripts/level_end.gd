@@ -1,6 +1,18 @@
 extends Area2D
 
-@export var next_level = ""
+var next_level = ""
+
+var can_change_level = false
+
+enum levels {
+	TUTORIAL,
+	FIRST_LEVEL,
+	SECOND_LEVEL,
+	THIRD_LEVEL
+}
+
+@export var current_level: levels
+
 
 func _on_body_entered(body: Node2D) -> void:
 	
@@ -19,9 +31,7 @@ func _on_body_exited(body: Node2D) -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if can_change_level and event.is_action_pressed("action"):
-	  call_deferred("load_next_scene")
+		load_next_scene()
 	
 func load_next_scene():
 	get_tree().change_scene_to_file("res://scenes/"+ next_level + ".tscn")
-
-		

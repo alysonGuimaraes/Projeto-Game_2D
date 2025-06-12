@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://mc4wq7a42igw"]
+
+[ext_resource type="Script" uid="uid://csup8ktk7bxt2" path="res://scripts/dialog_box.gd" id="1_ydwb0"]
+[ext_resource type="Texture2D" uid="uid://dlml4p73nbco" path="res://sprites/ui/dialogBox.png" id="2_0q05r"]
+[ext_resource type="FontFile" uid="uid://bfy3mqhb77x55" path="res://font/at01.ttf" id="3_x3vr2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0owkn"]
+font = ExtResource("3_x3vr2")
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[node name="dialog_box" type="MarginContainer"]
+offset_right = 64.0
+offset_bottom = 45.0
+script = ExtResource("1_ydwb0")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_0q05r")
+region_rect = Rect2(0, 0, 24, 16)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="label_margin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="text_label" type="Label" parent="label_margin"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_0owkn")
+horizontal_alignment = 1
