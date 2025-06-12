@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgyul6x7cytdj"
-path="res://.godot/imported/House (112 x 96).png-7e0585e6de4d8154bba97b849d23bcfc.ctex"
+uid="uid://nvdkc6nf5vql"
+path="res://.godot/imported/layer8.PNG-9eeb336c697081ec39045d391f9f6921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/terrain/Inside House/House (112 x 96).png"
-dest_files=["res://.godot/imported/House (112 x 96).png-7e0585e6de4d8154bba97b849d23bcfc.ctex"]
+source_file="res://sprites/RiverParallaxBackground1280x720/IndividualsLayers/layer8.PNG"
+dest_files=["res://.godot/imported/layer8.PNG-9eeb336c697081ec39045d391f9f6921.ctex"]
 
 [params]
 
