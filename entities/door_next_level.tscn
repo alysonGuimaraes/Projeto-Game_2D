@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfyfpap6jbspv"]
+
+[ext_resource type="Script" uid="uid://budf3b0ufdkj5" path="res://scripts/door.gd" id="1_6y81d"]
+[ext_resource type="Texture2D" uid="uid://rlt1awplivs6" path="res://sprites/ui/Mini UI/Speech_Emotes (16 x 16).png" id="2_c8nxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wgvt"]
+
+[node name="door" type="Node2D"]
+scale = Vector2(1, 1.56)
+script = ExtResource("1_6y81d")
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(0, -19.2307)
+scale = Vector2(1.32, 1)
+texture = ExtResource("2_c8nxx")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2wgvt")
+debug_color = Color(0.898039, 0.741176, 0.121569, 0.419608)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

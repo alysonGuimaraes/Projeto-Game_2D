@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func set_direction(dir):
-	direction = dir	
+	self.direction = direction	
 	
 
 func _on_timer_timeout() -> void:
