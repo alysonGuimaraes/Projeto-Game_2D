@@ -68,12 +68,12 @@ label_settings = SubResource("LabelSettings_gtqpr")
 
 [node name="diego_label" type="Label" parent="Devs"]
 layout_mode = 2
-text = "Diego"
+text = "Diego Shueda S. - 172214478"
 label_settings = SubResource("LabelSettings_gtqpr")
 
 [node name="edicarlos_label" type="Label" parent="Devs"]
 layout_mode = 2
-text = "Edicarlos"
+text = "Edicarlos J. Marques - 172422349"
 label_settings = SubResource("LabelSettings_gtqpr")
 
 [node name="Buttons" type="HBoxContainer" parent="."]

@@ -29,11 +29,11 @@ func _physics_process(delta: float) -> void:
 	if ! is_on_floor():
 		velocity += get_gravity() * delta
 		
-	if Input.is_action_just_pressed("shot"):
-		var new_orb = MAGICAL_ORB.instantiate()
-		new_orb.position = position
-		new_orb.direction = last_direction
-		add_sibling(new_orb)
+	#if Input.is_action_just_pressed("shot"):
+		#var new_orb = MAGICAL_ORB.instantiate()
+		#new_orb.position = position
+		#new_orb.direction = last_direction
+		#add_sibling(new_orb)
 		
 	match state:
 		playerState.IDLE: in_idle()
