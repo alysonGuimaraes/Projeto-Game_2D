@@ -156,7 +156,17 @@ z_index = 1
 position = Vector2(3, -13)
 scale = Vector2(1.02083, 1)
 sprite_frames = SubResource("SpriteFrames_qsoyl")
-animation = &"walk"
+animation = &"idle"
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2(1, -8)
+collision_layer = 2
+script = ExtResource("7_fo826")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_ffonl")
+debug_color = Color(0.98261, 0, 0.360632, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(44, -82)

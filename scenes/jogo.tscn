@@ -1174,6 +1174,7 @@ sources/15 = SubResource("TileSetAtlasSource_hp1jg")
 sources/16 = SubResource("TileSetAtlasSource_jhbch")
 
 [node name="Jogo" type="Node2D"]
+position = Vector2(2, -9)
 
 [node name="Diego" parent="." instance=ExtResource("26_xv4mj")]
 position = Vector2(95, 507)
@@ -1202,7 +1203,34 @@ texture = ExtResource("7_gsaar")
 centered = false
 
 [node name="inimigo1" parent="." instance=ExtResource("19_3dnd0")]
-position = Vector2(429, 499)
+position = Vector2(467, 493)
+
+[node name="inimigo2" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(422, 572)
+
+[node name="inimigo3" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(601, 570)
+
+[node name="inimigo4" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(767, 509)
+
+[node name="inimigo5" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(972, 567)
+
+[node name="inimigo6" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(838, 401)
+
+[node name="inimigo7" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(1241, 572)
+
+[node name="inimigo8" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(1871, 524)
+
+[node name="inimigo9" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(2006, 503)
+
+[node name="inimigo10" parent="." instance=ExtResource("19_3dnd0")]
+position = Vector2(2347, 540)
 
 [node name="DeathZone" parent="." instance=ExtResource("20_kvikr")]
 position = Vector2(530, 656)
