@@ -3,7 +3,6 @@ extends Area2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 
-
 var speed = 150
 var direction = 1
 
@@ -12,7 +11,7 @@ func _process(delta: float) -> void:
 
 
 func set_direction(dir):
-	self.direction = direction	
+	direction = dir	
 	
 
 func _on_timer_timeout() -> void:

@@ -23,6 +23,7 @@ var direction = 1
 var status: EnemyState
 
 func _ready() -> void:
+	attack_area.process_mode = Node.PROCESS_MODE_DISABLED
 	ir_para_andando()
 
 func _physics_process(delta: float) -> void:
@@ -67,7 +68,10 @@ func ir_para_atacando():
 	velocity = Vector2.ZERO
 
 func atacando():
-	pass
+	if anim.frame == 2:
+		attack_area.process_mode = Node.PROCESS_MODE_INHERIT
+	else:
+		attack_area.process_mode = Node.PROCESS_MODE_DISABLED
 
 func ir_para_morto():
 	status = EnemyState.morto
@@ -86,3 +90,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if anim.animation == "atacando":
 		ir_para_andando()
 		return
+
+
+func _on_attack_area_area_entered(area: Area2D) -> void:
+	area.take_damage()
