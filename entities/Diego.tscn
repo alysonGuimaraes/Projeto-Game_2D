@@ -176,7 +176,11 @@ shape = SubResource("CapsuleShape2D_onrkg")
 position = Vector2(3, -13)
 scale = Vector2(1.02083, 1)
 sprite_frames = SubResource("SpriteFrames_qsoyl")
+<<<<<<< HEAD
 animation = &"idle"
+=======
+animation = &"hurt"
+>>>>>>> 1e2dab788cfb67ba736fc8b53fc9116e2b48018c
 
 [node name="hitbox" type="Area2D" parent="."]
 position = Vector2(1, -8)
