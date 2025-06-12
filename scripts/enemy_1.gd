@@ -8,7 +8,9 @@ enum EnemyState {
 }
 
 var speed = 20.0
-@onready var hitbox: Area2D = $hitbox
+@onready var animated_sprite_2d: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var hitbox: Area2D = $Hitbox
+
 @onready var collision_shape_2d: CollisionShape2D = $AttackArea/CollisionShape2D
 @onready var anim: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
 @onready var fall_detect: RayCast2D = $FallDetect
@@ -57,17 +59,15 @@ func andando():
 	
 	if player_detect.is_colliding():
 		ir_para_atacando()
+		return
 
 func ir_para_atacando():
 	status = EnemyState.atacando
-	velocity.x = 0
 	anim.play("atacando")
+	velocity = Vector2.ZERO
 
 func atacando():
-	if anim.frame == 2:
-		attack_area.process_mode = Node.PROCESS_MODE_INHERIT
-	else:
-		attack_area.process_mode = Node.PROCESS_MODE_DISABLED
+	pass
 
 func ir_para_morto():
 	status = EnemyState.morto
@@ -85,3 +85,4 @@ func take_damage():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if anim.animation == "atacando":
 		ir_para_andando()
+		return
