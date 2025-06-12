@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjscuesvn58he"
-path="res://.godot/imported/layer1.PNG-ee487091ba0d990cf1ac4f4546768b9d.ctex"
+uid="uid://xvwl2giwk8f6"
+path="res://.godot/imported/castle-tileset.png-67b84aa138f767682cc4f028526ff76f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/RiverParallaxBackground1280x720/IndividualsLayers/layer1.PNG"
-dest_files=["res://.godot/imported/layer1.PNG-ee487091ba0d990cf1ac4f4546768b9d.ctex"]
+source_file="res://sprites/terrain/Pirate Ship/Sprites/Tilesets/castle-tileset.png"
+dest_files=["res://.godot/imported/castle-tileset.png-67b84aa138f767682cc4f028526ff76f.ctex"]
 
 [params]
 
