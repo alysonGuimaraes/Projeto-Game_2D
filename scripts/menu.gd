@@ -23,17 +23,13 @@ func _on_button_mouse_exited() -> void:
 func _on_button_pressed(_button: Button) -> void:
 	match _button.name:
 		"new_game_button": 
-			call_deferred("load_scene", "scene_outside_house")
+			call_deferred("load_scene", "scene_winter")
 		"how_to_play_button":
 			call_deferred("load_scene", "screen_how_to_play")
 		"credits_button":
 			call_deferred("load_scene", "screen_credits")
 		"exit_button":
 			call_deferred("quit_game")
-		"menu_button": 
-			call_deferred("load_scene","screen_menu")
-		"playAgain_button":
-			call_deferred("load_scene", "scene_outside_house")
 	
 
 func load_scene(scene):

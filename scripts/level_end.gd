@@ -16,15 +16,13 @@ enum levels {
 
 func _on_body_entered(body: Node2D) -> void:
 	
-	#print("vamos..")
+	print("vamos..")
 	
 	can_change_level = true
 	
 	match current_level:
-		levels.TUTORIAL: next_level = 'scene_tropic'
-		levels.FIRST_LEVEL: next_level = 'scene_winter'
-		levels.SECOND_LEVEL: next_level = 'jogo'
-		levels.THIRD_LEVEL: next_level = 'screen_finished'
+		levels.TUTORIAL: next_level = 'scene_winter'
+		levels.FIRST_LEVEL: next_level = 'scene_tropic'
 		
 func _on_body_exited(body: Node2D) -> void:
 	can_change_level = false

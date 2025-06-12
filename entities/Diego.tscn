@@ -1,11 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://bu4sa6ownghlp"]
+[gd_scene load_steps=28 format=3 uid="uid://bu4sa6ownghlp"]
 
 [ext_resource type="Script" uid="uid://dln8mfd1bao14" path="res://scripts/diego.gd" id="1_fo826"]
 [ext_resource type="Texture2D" uid="uid://ojmqaugi8f3y" path="res://sprites/1 - Diego/1 - Diego/Crouching (32 x 32).png" id="2_fo826"]
 [ext_resource type="Texture2D" uid="uid://b63v132bfrwqo" path="res://sprites/1 - Diego/1 - Diego/Shooting_while_standing (48 x 48).png" id="3_ateax"]
+[ext_resource type="Texture2D" uid="uid://d3psm8axrjehb" path="res://sprites/characters/Diego/Hurt (32 x 48).png" id="4_ffonl"]
 [ext_resource type="Texture2D" uid="uid://dy3sdevx4t84h" path="res://sprites/1 - Diego/1 - Diego/Idle (32 x 48).png" id="4_vdkwy"]
 [ext_resource type="Texture2D" uid="uid://bnbyinoma6ub3" path="res://sprites/characters/Diego/Jump (32 x 48).png" id="5_ra7xx"]
 [ext_resource type="Texture2D" uid="uid://cjh8quivqn1xy" path="res://sprites/1 - Diego/1 - Diego/Running (32 x 48).png" id="5_vdkwy"]
+[ext_resource type="Script" uid="uid://b4nkdphmbtw8r" path="res://scripts/hitbox.gd" id="7_fo826"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 radius = 7.0
@@ -26,6 +28,10 @@ region = Rect2(96, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
 atlas = ExtResource("2_fo826")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqq46"]
+atlas = ExtResource("4_ffonl")
+region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs756"]
 atlas = ExtResource("4_vdkwy")
@@ -96,6 +102,17 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_sqq46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqq46")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fs756")
 }, {
@@ -144,7 +161,11 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffonl"]
+size = Vector2(12, 22)
+
 [node name="Diego" type="CharacterBody2D" groups=["Players"]]
+collision_layer = 2
 script = ExtResource("1_fo826")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -152,7 +173,6 @@ position = Vector2(1, -7)
 shape = SubResource("CapsuleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
 position = Vector2(3, -13)
 scale = Vector2(1.02083, 1)
 sprite_frames = SubResource("SpriteFrames_qsoyl")
@@ -174,4 +194,4 @@ limit_left = 0
 position_smoothing_enabled = true
 
 [node name="spawn" type="Node2D" parent="."]
-position = Vector2(10, -6)
+position = Vector2(9, 1)

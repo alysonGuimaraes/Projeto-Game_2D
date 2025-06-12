@@ -25,6 +25,7 @@ var direction = 1
 var status: EnemyState
 
 func _ready() -> void:
+	attack_area.process_mode = Node.PROCESS_MODE_DISABLED
 	ir_para_andando()
 
 func _physics_process(delta: float) -> void:
@@ -72,6 +73,7 @@ func ir_para_morto():
 	velocity.x = 0
 	anim.play("morto")
 	hitbox.queue_free()
+	collision_shape_2d.queue_free()
 	
 func morto():
 	pass
@@ -83,3 +85,7 @@ func take_damage():
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if anim.animation == "atacando":
 		ir_para_andando()
+
+
+func _on_attack_area_area_entered(area: Area2D) -> void:
+	area.take_damage()
