@@ -1174,10 +1174,7 @@ sources/15 = SubResource("TileSetAtlasSource_hp1jg")
 sources/16 = SubResource("TileSetAtlasSource_jhbch")
 
 [node name="Jogo" type="Node2D"]
-<<<<<<< HEAD
 position = Vector2(2, -9)
-=======
->>>>>>> 1e2dab788cfb67ba736fc8b53fc9116e2b48018c
 
 [node name="Terreno" type="TileMapLayer" parent="."]
 position = Vector2(25, 1)
@@ -1203,7 +1200,6 @@ texture = ExtResource("7_gsaar")
 centered = false
 
 [node name="inimigo1" parent="." instance=ExtResource("19_3dnd0")]
-<<<<<<< HEAD
 position = Vector2(467, 493)
 
 [node name="inimigo2" parent="." instance=ExtResource("19_3dnd0")]
@@ -1232,9 +1228,6 @@ position = Vector2(2006, 503)
 
 [node name="inimigo10" parent="." instance=ExtResource("19_3dnd0")]
 position = Vector2(2347, 540)
-=======
-position = Vector2(429, 509)
->>>>>>> 1e2dab788cfb67ba736fc8b53fc9116e2b48018c
 
 [node name="DeathZone" parent="." instance=ExtResource("20_kvikr")]
 position = Vector2(530, 656)

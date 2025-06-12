@@ -269,7 +269,7 @@ shape = SubResource("CapsuleShape2D_p74y7")
 position = Vector2(-1, -3)
 scale = Vector2(0.984375, 1.20313)
 sprite_frames = SubResource("SpriteFrames_hen42")
-animation = &"morto"
+animation = &"andando"
 
 [node name="Hitbox" type="Area2D" parent="." groups=["DeathZone"]]
 collision_layer = 4

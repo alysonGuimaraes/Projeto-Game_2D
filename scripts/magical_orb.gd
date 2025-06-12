@@ -3,6 +3,7 @@ extends Area2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 
+
 var speed = 150
 var direction = 1
 
