@@ -10,7 +10,6 @@ const JUMP_VELOCITY = -400
 
 var damage_count = 3
 var last_direction = 1
-var direction = 1
 
 enum playerState {
 	IDLE,
@@ -35,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shot"):
 		var new_orb = MAGICAL_ORB.instantiate()
 		new_orb.position = spawn.global_position
-		new_orb.set_direction(self.direction) 
+		new_orb.set_direction(last_direction) 
 		add_sibling(new_orb)
 		
 		
@@ -130,11 +129,8 @@ func go_to_hurt():
 	
 
 func in_hurt():
-	if damage_count > 0:
+	if anim.frame == 1:
 		call_deferred("reload_scene")
-		damage_count == 3
-		
-	damage_count -= 1
 	
 
 func go_to_attack():

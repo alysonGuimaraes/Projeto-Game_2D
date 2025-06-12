@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cv7d3vy27yqfu"]
+[gd_scene load_steps=16 format=4 uid="uid://bs0e3n06y62mw"]
 
 [ext_resource type="PackedScene" uid="uid://dke4lfa0cgh4y" path="res://entities/holly.tscn" id="1_32qp4"]
 [ext_resource type="Texture2D" uid="uid://dqr0gw1h28rms" path="res://sprites/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="2_wesq1"]
@@ -10,7 +10,7 @@
 [ext_resource type="TileSet" uid="uid://cepg4s204y06c" path="res://tilesets/ground.tres" id="8_uwljr"]
 [ext_resource type="TileSet" uid="uid://dw6l1i2y5jq5n" path="res://tilesets/decoration.tres" id="9_mjvsd"]
 [ext_resource type="PackedScene" uid="uid://uo2qihjmfjo" path="res://entities/player_camera.tscn" id="10_wesq1"]
-[ext_resource type="Script" uid="uid://begl3bg6aq26x" path="res://scripts/tutorial_plate.gd" id="11_wq1hh"]
+[ext_resource type="Script" path="res://scripts/tutorial_plate.gd" id="11_wq1hh"]
 [ext_resource type="PackedScene" uid="uid://cujbr4janssdg" path="res://entities/level_end.tscn" id="12_eehjq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xql3c"]
