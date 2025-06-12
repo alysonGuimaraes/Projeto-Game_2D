@@ -1,12 +1,14 @@
-[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://dw6l1i2y5jq5n"]
+[gd_resource type="TileSet" load_steps=24 format=3 uid="uid://dw6l1i2y5jq5n"]
 
 [ext_resource type="Texture2D" uid="uid://d1t11thao4kl3" path="res://sprites/terrain/Winter World/Winter_entities (16 x 16).png" id="1_omqfk"]
 [ext_resource type="Texture2D" uid="uid://byq5rx315gihg" path="res://sprites/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" id="2_g2y7v"]
 [ext_resource type="Texture2D" uid="uid://brd6ejl515pi1" path="res://sprites/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="3_omqfk"]
 [ext_resource type="Texture2D" uid="uid://br3arrjcfetso" path="res://sprites/misc/Misc. universal tiles/Blocks (16 x 16).png" id="4_1rlr1"]
+[ext_resource type="Texture2D" uid="uid://bgyul6x7cytdj" path="res://sprites/terrain/Inside House/House (112 x 96).png" id="4_o7365"]
 [ext_resource type="Texture2D" uid="uid://bt4w7qhnavepu" path="res://sprites/misc/Misc. universal tiles/Flowers (16 x 16).png" id="5_nuo48"]
 [ext_resource type="Texture2D" uid="uid://dqgsob83xym82" path="res://sprites/misc/Misc. universal tiles/Metal_Wire_fence (16 x 16).png" id="6_nuo48"]
 [ext_resource type="Texture2D" uid="uid://b47ich67qjf3e" path="res://sprites/misc/Misc. universal tiles/Snack_machine_Bench_Trash_bin (16 x 16).png" id="7_cum1x"]
+[ext_resource type="Texture2D" uid="uid://etrjyb7c2gsq" path="res://sprites/misc/Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png" id="8_38qtr"]
 [ext_resource type="Texture2D" uid="uid://br60orny43777" path="res://sprites/misc/stem.png" id="8_cum1x"]
 [ext_resource type="Texture2D" uid="uid://wjhu52ld4l5m" path="res://sprites/misc/Misc. universal tiles/House (112 x 96).png" id="9_mievr"]
 
@@ -72,6 +74,40 @@ texture = ExtResource("2_g2y7v")
 12:8/0 = 0
 13:8/0 = 0
 14:8/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pylla"]
+texture = ExtResource("8_38qtr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/z_index = 2
+1:1/0 = 0
+1:1/0/z_index = 2
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ed0kl"]
+texture = ExtResource("4_o7365")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fs4vl"]
 texture = ExtResource("3_omqfk")
@@ -209,6 +245,23 @@ texture = ExtResource("7_cum1x")
 5:2/0 = 0
 6:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2ln0"]
+texture = ExtResource("8_38qtr")
+0:0/animation_columns = 4
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/0 = 0
+0:0/0/z_index = 2
+0:1/animation_columns = 4
+0:1/animation_frame_0/duration = 1.0
+0:1/animation_frame_1/duration = 1.0
+0:1/animation_frame_2/duration = 1.0
+0:1/animation_frame_3/duration = 1.0
+0:1/0 = 0
+0:1/0/z_index = 2
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6c756"]
 texture = ExtResource("8_cum1x")
 0:1/0 = 0
@@ -302,3 +355,6 @@ sources/5 = SubResource("TileSetAtlasSource_o7365")
 sources/6 = SubResource("TileSetAtlasSource_rjmo8")
 sources/8 = SubResource("TileSetAtlasSource_6c756")
 sources/9 = SubResource("TileSetAtlasSource_cv037")
+sources/7 = SubResource("TileSetAtlasSource_q2ln0")
+sources/10 = SubResource("TileSetAtlasSource_pylla")
+sources/11 = SubResource("TileSetAtlasSource_ed0kl")

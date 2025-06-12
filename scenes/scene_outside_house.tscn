@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bs0e3n06y62mw"]
+[gd_scene load_steps=18 format=4 uid="uid://bs0e3n06y62mw"]
 
 [ext_resource type="Texture2D" uid="uid://dqr0gw1h28rms" path="res://sprites/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="1_2wgvt"]
 [ext_resource type="Texture2D" uid="uid://c13gexm4kds6n" path="res://sprites/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="2_7g2ff"]
@@ -9,11 +9,11 @@
 [ext_resource type="TileSet" uid="uid://cepg4s204y06c" path="res://tilesets/ground.tres" id="7_e0ha6"]
 [ext_resource type="TileSet" uid="uid://dw6l1i2y5jq5n" path="res://tilesets/decoration.tres" id="8_ft33d"]
 [ext_resource type="PackedScene" uid="uid://uo2qihjmfjo" path="res://entities/player_camera.tscn" id="9_obrvl"]
+[ext_resource type="PackedScene" uid="uid://p8i5c3xrp6tv" path="res://entities/sign.tscn" id="10_7tbgw"]
 [ext_resource type="Script" uid="uid://begl3bg6aq26x" path="res://scripts/tutorial_plate.gd" id="10_avnfk"]
 [ext_resource type="PackedScene" uid="uid://dke4lfa0cgh4y" path="res://entities/holly.tscn" id="11_27rmm"]
 [ext_resource type="PackedScene" uid="uid://cujbr4janssdg" path="res://entities/level_end.tscn" id="12_7nd1i"]
-[ext_resource type="Texture2D" uid="uid://rlt1awplivs6" path="res://sprites/ui/Mini UI/Speech_Emotes (16 x 16).png" id="13_7g2ff"]
-[ext_resource type="Script" uid="uid://budf3b0ufdkj5" path="res://scripts/door.gd" id="13_7tbgw"]
+[ext_resource type="PackedScene" uid="uid://bfyfpap6jbspv" path="res://entities/door_next_level.tscn" id="13_7g2ff"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xql3c"]
 shader = ExtResource("3_7tbgw")
@@ -23,8 +23,6 @@ shader_parameter/Speed = 0.02
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eehjq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq1hh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wgvt"]
 
 [node name="Outside_house" type="Node2D"]
 
@@ -98,17 +96,8 @@ limit_bottom = 430
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="move_sign" type="Node2D" parent="."]
+[node name="move_sign" parent="." instance=ExtResource("10_7tbgw")]
 position = Vector2(200, 377)
-script = ExtResource("10_avnfk")
-text_message = Array[String](["Andar: A / D"])
-
-[node name="move_sign" type="Area2D" parent="move_sign" groups=["signs"]]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="move_sign/move_sign"]
-shape = SubResource("RectangleShape2D_eehjq")
-debug_color = Color(0.137255, 1, 0, 0.745098)
 
 [node name="jump_sign" type="Node2D" parent="."]
 position = Vector2(455, 377)
@@ -133,27 +122,11 @@ scale = Vector2(1, 7.36)
 shape = SubResource("RectangleShape2D_wq1hh")
 
 [node name="LevelEnd" parent="." instance=ExtResource("12_7nd1i")]
-position = Vector2(819, 278)
+position = Vector2(823, 282)
+scale = Vector2(0.52, 0.96)
 
-[node name="door" type="Node2D" parent="."]
+[node name="door" parent="." instance=ExtResource("13_7g2ff")]
 position = Vector2(832, 320)
 scale = Vector2(1, 1.56)
-script = ExtResource("13_7tbgw")
-
-[node name="icon" type="Sprite2D" parent="door"]
-position = Vector2(0, -19.2307)
-scale = Vector2(1.32, 1)
-texture = ExtResource("13_7g2ff")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="Area2D" type="Area2D" parent="door"]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door/Area2D"]
-shape = SubResource("RectangleShape2D_2wgvt")
-debug_color = Color(0.898039, 0.741176, 0.121569, 0.419608)
 
 [connection signal="body_exited" from="LevelEnd" to="LevelEnd" method="_on_body_exited"]
-[connection signal="area_entered" from="door/Area2D" to="door" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="door/Area2D" to="door" method="_on_area_2d_area_exited"]

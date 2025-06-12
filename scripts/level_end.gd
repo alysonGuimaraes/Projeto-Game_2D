@@ -8,8 +8,7 @@ enum levels {
 	TUTORIAL,
 	FIRST_LEVEL,
 	SECOND_LEVEL,
-	THIRD_LEVEL,
-	END_SCREEN
+	THIRD_LEVEL
 }
 
 @export var current_level: levels
