@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 const MAGICAL_ORB = preload("res://entities/magical_orb.tscn")
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -400
+const SPEED = 150.0
+const JUMP_VELOCITY = -320
 
 var damage_count = 3
 var last_direction = 1
@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 		new_orb.position = position
 		new_orb.direction = last_direction
 		add_sibling(new_orb)
+		
 		
 	match state:
 		playerState.IDLE: in_idle()

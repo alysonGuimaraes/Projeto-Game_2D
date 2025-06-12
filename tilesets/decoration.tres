@@ -1,3 +1,4 @@
+
 [gd_resource type="TileSet" load_steps=24 format=3 uid="uid://dw6l1i2y5jq5n"]
 
 [ext_resource type="Texture2D" uid="uid://d1t11thao4kl3" path="res://sprites/terrain/Winter World/Winter_entities (16 x 16).png" id="1_omqfk"]
@@ -129,16 +130,13 @@ texture = ExtResource("3_omqfk")
 6:5/0 = 0
 7:5/0 = 0
 9:5/0 = 0
-9:5/0/z_index = 1
 10:5/0 = 0
-10:5/0/z_index = 1
 11:5/0 = 0
 12:5/0 = 0
 14:5/0 = 0
 16:5/0 = 0
 18:5/0 = 0
 1:1/size_in_atlas = Vector2i(3, 3)
-1:1/next_alternative_id = 3
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mievr"]
