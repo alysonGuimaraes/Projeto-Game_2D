@@ -8,11 +8,11 @@ enum EnemyState {
 }
 
 var speed = 20.0
-@onready var animated_sprite_2d: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
 
 @onready var collision_shape_2d: CollisionShape2D = $AttackArea/CollisionShape2D
-@onready var anim: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var fall_detect: RayCast2D = $FallDetect
 
 @onready var player_detect: RayCast2D = $PlayerDetect

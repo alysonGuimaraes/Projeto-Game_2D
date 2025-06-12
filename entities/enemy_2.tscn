@@ -138,12 +138,13 @@ radius = 7.0
 height = 20.0
 
 [node name="enemy2" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_wahi8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_xja88")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_gbtex")
 animation = &"atacando"
@@ -181,5 +182,5 @@ script = ExtResource("15_gobvt")
 shape = SubResource("CapsuleShape2D_do66i")
 debug_color = Color(0.622245, 0.454609, 0.735654, 0.42)
 
-[connection signal="animation_finished" from="CollisionShape2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]

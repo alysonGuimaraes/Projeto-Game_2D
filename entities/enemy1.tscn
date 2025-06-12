@@ -259,14 +259,15 @@ radius = 3.37354
 height = 19.9997
 
 [node name="inimigo1" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_yhaby")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 4)
 shape = SubResource("CapsuleShape2D_p74y7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(-1, -3)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 1)
 scale = Vector2(0.984375, 1.20313)
 sprite_frames = SubResource("SpriteFrames_hen42")
 animation = &"andando"
@@ -306,5 +307,5 @@ rotation = -3.7906
 shape = SubResource("CapsuleShape2D_fiutt")
 debug_color = Color(0.959589, 0, 0.520788, 0.42)
 
-[connection signal="animation_finished" from="CollisionShape2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]

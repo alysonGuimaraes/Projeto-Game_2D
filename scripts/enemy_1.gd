@@ -8,12 +8,12 @@ enum EnemyState {
 }
 
 var speed = 20.0
-@onready var animated_sprite_2d: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 @onready var collision_shape_2d: CollisionShape2D = $AttackArea/CollisionShape2D
-@onready var anim: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var fall_detect: RayCast2D = $FallDetect
 @onready var player_detect: RayCast2D = $PlayerDetect
 @onready var attack_area: Area2D = $AttackArea
@@ -75,7 +75,6 @@ func atacando():
 		attack_area.process_mode = Node.PROCESS_MODE_DISABLED
 
 func ir_para_morto():
-
 	status = EnemyState.morto
 	velocity.x = 0
 	anim.play("morto")
